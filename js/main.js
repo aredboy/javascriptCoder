@@ -204,7 +204,7 @@ function renderCart() {
         cartContainer.appendChild(row);
     });
     
-    //storageSync();
+    storageSync();
 };
 
 function clearCart() {
@@ -218,7 +218,7 @@ function emptyCart() {
         cartContainer.removeChild(cartContainer.firstChild);
     };
     cartArticles = [];
-    //storageSync();
+    storageSync();
 };
 
 function eliminateProduct(evt) {
@@ -231,11 +231,19 @@ function eliminateProduct(evt) {
     }
 };
 
+function storageSync() {
+    localStorage.setItem("cart", JSON.stringify(cartArticles));
+};
 
 
 // Events
+window.addEventListener("DOMContentLoaded", ()=> {
+    cartArticles = JSON.parse(localStorage.getItem("cart")) || [];
+    renderCart();
+});
 strainBtn.addEventListener('click', chooseStrainByMedicalCondition);
 displayElement.addEventListener('click', addProduct);
 emptyCartBtn.addEventListener('click', emptyCart);
 cart.addEventListener('click', eliminateProduct);
 disableStrainBtn.addEventListener('click', disableStrain)
+// Queria aprovechar la entrega para preguntar como hacer para agregar un eventListener a un elemento que pertenece a Sweet Alert 2, intente seleccionarlo con un queryselector para agregarle una funcion escuchandolo y no me lo lee a pesar de que uso su class especifica. Gracias!
