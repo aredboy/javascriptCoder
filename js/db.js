@@ -1,274 +1,146 @@
 
-// const autos = [
-// 	{
-// 		marca: 'BMW',
-// 		modelo: 'Serie 3',
-// 		year: 2020,
-// 		precio: 30000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{ 
-//         marca: 'Audi', 
-//         modelo: 'A4', 
-//         year: 2020, 
-//         precio: 40000, 
-//         puertas: 4, 
-//         color: 'Negro', 
-//         transmision: 'automatico' 
-//     },
-// 	{
-// 		marca: 'Ford',
-// 		modelo: 'Mustang',
-// 		year: 2015,
-// 		precio: 20000,
-// 		puertas: 2,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{ 
-//         marca: 'Audi', 
-//         modelo: 'A6', 
-//         year: 2020, 
-//         precio: 35000, 
-//         puertas: 4, 
-//         color: 'Negro', 
-//         transmision: 'automatico' 
-//     },
-// 	{
-// 		marca: 'BMW',
-// 		modelo: 'Serie 5',
-// 		year: 2016,
-// 		precio: 70000,
-// 		puertas: 4,
-// 		color: 'Rojo',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'Mercedes Benz',
-// 		modelo: 'Clase C',
-// 		year: 2015,
-// 		precio: 25000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'Chevrolet',
-// 		modelo: 'Camaro',
-// 		year: 2018,
-// 		precio: 60000,
-// 		puertas: 2,
-// 		color: 'Rojo',
-// 		transmision: 'manual'
-// 	},
-// 	{ 
-//         marca: 'Ford', 
-//         modelo: 'Mustang', 
-//         year: 2019, 
-//         precio: 80000, 
-//         puertas: 2, 
-//         color: 'Rojo', 
-//         transmision: 'manual' 
-//     },
-// 	{
-// 		marca: 'Dodge',
-// 		modelo: 'Challenger',
-// 		year: 2020,
-// 		precio: 40000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{ 
-//         marca: 'Audi', 
-//         modelo: 'A3', 
-//         year: 2017, 
-//         precio: 55000, 
-//         puertas: 2, 
-//         color: 'Negro', 
-//         transmision: 
-//         'manual' 
-//     },
-// 	{
-// 		marca: 'Dodge',
-// 		modelo: 'Challenger',
-// 		year: 2020,
-// 		precio: 25000,
-// 		puertas: 2,
-// 		color: 'Rojo',
-// 		transmision: 'manual'
-// 	},
-// 	{
-// 		marca: 'Mercedes Benz',
-// 		modelo: 'Clase C',
-// 		year: 2018,
-// 		precio: 45000,
-// 		puertas: 4,
-// 		color: 'Azul',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'BMW',
-// 		modelo: 'Serie 5',
-// 		year: 2019,
-// 		precio: 90000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{ 
-//         marca: 'Ford', 
-//         modelo: 'Mustang', 
-//         year: 2017, 
-//         precio: 60000, 
-//         puertas: 2, 
-//         color: 'Negro', 
-//         transmision: 'manual' 
-//     },
-// 	{
-// 		marca: 'Dodge',
-// 		modelo: 'Challenger',
-// 		year: 2015,
-// 		precio: 35000,
-// 		puertas: 2,
-// 		color: 'Azul',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'BMW',
-// 		modelo: 'Serie 3',
-// 		year: 2018,
-// 		precio: 50000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'BMW',
-// 		modelo: 'Serie 5',
-// 		year: 2017,
-// 		precio: 80000,
-// 		puertas: 4,
-// 		color: 'Negro',
-// 		transmision: 'automatico'
-// 	},
-// 	{
-// 		marca: 'Mercedes Benz',
-// 		modelo: 'Clase C',
-// 		year: 2018,
-// 		precio: 40000,
-// 		puertas: 4,
-// 		color: 'Blanco',
-// 		transmision: 'automatico'
-// 	},
-// 	{ 
-//         marca: 'Audi', 
-//         modelo: 'A4', 
-//         year: 2016, 
-//         precio: 30000, 
-//         puertas: 4, 
-//         color: 'Azul', 
-//         transmision: 'automatico' 
-//     }
-// ]
-
-// // console.table(strains);
-
-// let marca = prompt("Ingresar marca");
-// let year = Number(prompt("Ingresar año"));
-// let minimo = Number(prompt("Ingresar minimo"));
-// let maximo = Number(prompt("Ingresar maximo"));
-// let puertas = Number(prompt("Ingresar puertas"));
-// let transmision = prompt("Ingresar transmision");
-// let color = prompt("Ingresar color");
-
-// function mostrarAutos(autos) {
-//   //console.log(autos);
-//   autos.forEach((auto) =>
-//     console.log(
-//         auto.marca +
-//         " - " +
-//         auto.modelo +
-//         " - " +
-//         auto.year +
-//         " - " +
-//         auto.puertas +
-//         " Puertas - Transmision " +
-//         auto.transmision +
-//         " - Precio " +
-//         auto.precio +
-//         " - Color " +
-//         auto.color
-//     )
-//   );
-// }
-
-// function filtrarAutos() {
-//   const resultado = autos
-//     .filter(filtrarMarca)
-//     .filter(filtrarYear)
-//     .filter(filtrarMinimo)
-//     .filter(filtrarMaximo)
-//     .filter(filtrarPuertas)
-//     .filter(filtrarTransmision)
-//     .filter(filtrarColor);
-//   if (resultado.length > 0) {
-//     mostrarAutos(resultado);
-//   } else {
-//     alert("No hay esa marca en existencia");
-//   }
-//   //const resultado = autos.filter( auto => mostrarAutos())
-// }
-
-// function filtrarMarca(auto) {
-//   if (marca) {
-//     return auto.marca === marca;
-//   }
-//   return auto;
-// }
-
-// function filtrarYear(auto) {
-//   if (year) {
-//     return auto.year === year;
-//   }
-//   return auto;
-// }
-
-// function filtrarMinimo(auto) {
-//   if (minimo) {
-//     return auto.precio >= minimo;
-//   }
-//   return auto;
-// }
-
-// function filtrarMaximo(auto) {
-//   if (maximo) {
-//     return auto.precio <= maximo;
-//   }
-//   return auto;
-// }
-
-// function filtrarPuertas(auto) {
-//   if (puertas) {
-//     return auto.puertas === puertas;
-//   }
-//   return auto;
-// }
-
-// function filtrarTransmision(auto) {
-//   if (transmision) {
-//     return auto.transmision === transmision;
-//   }
-//   return auto;
-// }
-
-// function filtrarColor(auto) {
-//   if (color) {
-//     return auto.color === color;
-//   }
-//   return auto;
-// }
-
-// filtrarAutos();
+const strains = [
+	{
+        id: 1,
+        name: 'Chemdawg',
+        image: './img/chemdawg.png',
+        thc: '18%',
+		cbd: 'CBG 1%',
+		rating: 4.3,
+        price: 'u$d 3',
+		feelings: 'Euforia, Inspiración, Creatividad',
+		negatives: 'Boca seca, Ojos secos, Mareo',
+		helps: 'Estrés, Ansiedad, Dolor',
+        description: 'https://www.leafly.com/strains/chemdawg'
+	},
+	{
+        id: 2,
+        name: 'OG Kush',
+        image: './img/og-kush.png',
+        thc: '18%',
+		cbd: '0%',
+		rating: 4.3,
+        price: 'u$d 3',
+		feelings: 'Hambre, Sueño, Euforia',
+		negatives: 'Boca seca, Ojos secos, Paranoia',
+		helps: 'Estrés, Ansiedad, Dolor',
+        description: 'https://www.leafly.com/strains/og-kush'
+	},
+	{
+        id: 3,
+        name: 'Skunk Dawg',
+        image: './img/skunk-dawg.png',
+        thc: '21%',
+		cbd: 'CBG 1%',
+		rating: 4.5,
+        price: 'u$d 3',
+		feelings: 'Verborragia, Enfoque, Energética',
+		negatives: 'Boca seca, Paranoia, Ansiedad',
+		helps: 'Estrés, Depresión, Ansiedad',
+        description: 'https://www.leafly.com/strains/skunk-dawg'
+	},
+	{
+        id: 4,
+        name: 'Blueberry AK',
+        image: './img/blueberry-ak.png',
+        thc: '20%',
+		cbd: 'CBG 1%',
+		rating: 4.7,
+        price: 'u$d 3',
+		feelings: 'Euforia, Relajación, Hambre',
+		negatives: 'Dolor de cabeza, Mareo, Boca seca',
+		helps: 'Estrés, Ansiedad, Depresión',
+        description: 'https://www.leafly.com/strains/blueberry-ak'
+	},
+	{
+        id: 5,
+        name: 'Strawberry Cheesecake',
+        image: './img/strawberry-cheesecake.png',
+        thc: '16%',
+		cbd: '0%',
+		rating: 4.5,
+        price: 'u$d 3',
+		feelings: 'Alegría, Sueño, Euforia',
+		negatives: 'Ojos secos, Mareo, Boca seca',
+		helps: 'Dolor, Estrés, Depresión',
+        description: 'https://www.leafly.com/strains/strawberry-cheesecake'
+	},
+	{
+        id: 6,
+        name: 'Cereal Milk',
+        image: './img/cereal-milk.png',
+        thc: '22%',
+		cbd: 'CBG 1%',
+		rating: 4.6,
+        price: 'u$d 3',
+		feelings: 'Relajacion, Risueño, Despierto',
+		negatives: 'Dolor de cabeza, Ansiedad, Paranoia',
+		helps: 'Ansiedad, Depresión, Estrés',
+        description: 'https://www.leafly.com/strains/cereal-milk'
+	},
+	{
+        id: 7,
+        name: 'Harle-Tsu',
+        image: './img/harle-tsu.png',
+        thc: '0%',
+		cbd: '11%',
+		rating: 4.5,
+        price: 'u$d 3',
+		feelings: 'Relajacion, Enfoque, Despierto',
+		negatives: 'Dolor de cabeza, Mareo, Ojos secos',
+		helps: 'Dolor, Estrés, Ansiedad',
+        description: 'https://www.leafly.com/strains/harle-tsu'
+	},
+	{
+        id: 8,
+        name: 'Cherry Cheesecake',
+        image: './img/cherry-cheesecake.png',
+        thc: '0%',
+		cbd: '11%',
+		rating: 5.0,
+        price: 'u$d 3',
+		feelings: 'Risueño, Verborragia, Enfoque',
+		negatives: 'Boca seca',
+		helps: 'Ansiedad, Enfermedad de Crohn´s',
+        description: 'https://www.leafly.com/strains/cherry-cheesecake'
+	},
+	{
+        id: 9,
+        name: 'Cherry On Top',
+        image: './img/cherry-on-top.png',
+        thc: '0%',
+		cbd: '8%',
+		rating: 4.5,
+        price: 'u$d 3',
+		feelings: 'Alegría, Sueño, Hambre',
+		negatives: 'Boca seca',
+		helps: 'Depresión, Ansiedad, Insomnio',
+        description: 'https://www.leafly.com/strains/cherry-cheesecake'
+	},
+	{
+        id: 10,
+        name: 'Harlequin',
+        image: './img/harlequin.jpg',
+        thc: '5%',
+		cbd: '9%',
+		rating: 4.3,
+        price: 'u$d 3',
+		feelings: 'Enfoque, Energético, Despierto',
+		negatives: 'Ansiedad, Dolor de cabeza, Ojos secos',
+		helps: 'Dolor, Ansiedad, Estrés',
+        description: 'https://www.leafly.com/strains/harlequin'
+	},
+	{
+        id: 11,
+        name: 'Mochi',
+        image: './img/mochi.png',
+        thc: '10%',
+		cbd: '0%',
+		rating: 4.6,
+        price: 'u$d 3',
+		feelings: 'Sueño, Relajación, Hambre',
+		negatives: 'Ansiedad, Paranoia, Ojos secos',
+		helps: 'Ansiedad, Insomnio, Estrés',
+        description: 'https://www.leafly.com/strains/mochi'
+	},
+];

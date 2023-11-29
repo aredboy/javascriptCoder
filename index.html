@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Proyecto Final</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/sweetalert2.all.min.js" defer></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/strainDB.json" defer></script>
+        <script src="./js/db.js" defer></script>
+        <script src="./js/main.js" defer></script>
+    <title>Buenos Aires High Club</title>
 </head>
 <body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <span id="logo">Buenos Aires High Club</span>
+                </div>
+
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito" width="40">
+                            <div id="cart">
+                                <!--completar el dibujo del carrito -->
+                                <table id="cart-list" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+
+                                </table>
+                                <a href="#" id="empty-cart" class="boton u-full-width">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <h1>Buenos Aires High Club</h1>
     <p>Bienvenido al mejor club de cannabis medicinal del país.<br></p>
-    <button onclick="openDialog()">Hacé tu pedido</button>
-    
-    <script src="./js/db.js"></script>
-    <script src="./js/main.js"></script>
+
+    <form  class="main-form" autocomplete="off
+    ">
+    <div>
+        <label for="medical-condition-list">Elija la dolencia prescripta por su médico:</label>
+        <input list="medical-condition" id="medical-condition-list">
+            <datalist id="medical-condition" dir="auto">
+                <option value="Ansiedad"></option>
+                <option value="Estrés"></option>
+                <option value="Depresión"></option>
+                <option value="Dolor"></option>
+                <option value="Insomnio"></option>
+                <option value="Enfermedad de Crohn´s"></option>
+            </datalist>
+    </div>
+    <button id="btnStrain">Elegí tu cepa</button>
+    <div class="display"></div>
+    </form>
 
 </body>
 </html>
