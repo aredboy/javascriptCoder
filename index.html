@@ -5,67 +5,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="./js/sweetalert2.all.min.js" defer></script>
         <link rel="stylesheet" href="./css/styles.css">
-        <script src="./js/strainDB.json" defer></script>
-        <script src="./js/db.js" defer></script>
+        <link rel="stylesheet" href="./css/framework.css">
+        <link rel="stylesheet" href="./css/reset.css">
         <script src="./js/main.js" defer></script>
     <title>Buenos Aires High Club</title>
 </head>
 <body>
+
     <header id="header" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="four columns">
-                    <span id="logo">Buenos Aires High Club</span>
-                </div>
 
-                <div class="two columns u-pull-right">
-                    <ul>
-                        <li class="submenu">
-                            <img src="img/cart.png" id="img-carrito" width="40">
-                            <div id="cart">
-                                <!--completar el dibujo del carrito -->
-                                <table id="cart-list" class="u-full-width">
-                                    <thead>
-                                        <tr>
-                                            <th>Imagen</th>
-                                            <th>Nombre</th>
-                                            <th>Precio</th>
-                                            <th>Cantidad</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
+    <div class="main-header__logo-container">
+        <img src="./img/iconlogo.svg" alt="logo" class="logo">
+    </div>
+    <div class="column">
+        <span id="logo">Buenos Aires High Club</span>
+    </div>
 
-                                </table>
-                                <a href="#" id="empty-cart" class="boton u-full-width">Vaciar Carrito</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div class="main-header__cart-button-container offset-by-ten columns" >
+    <span>
+        <img src="img/cart.png" id="cart-button-image" class="cart-button-image" width="40">
+    </span>
+    </div>
+
+    
+    <ul>
+        <div id="cart-container" class="cart-container">
+            <table id="cart-list" class="cart-container__content">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th class="cart-container__close">x</th>
+                    </tr>
+                </thead>
+                <tbody ></tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" id="empty-cart" class="boton cart-container__empty">Vaciar Carrito</a>
+                        </td>
+                        <td class="cart-container__footer">Total:</td>
+                        <td class="cart-product_total-quantity"></td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
+    </ul>
+
+
+
     </header>
 
-    <h1>Buenos Aires High Club</h1>
-    <p>Bienvenido al mejor club de cannabis medicinal del país.<br></p>
+    <main>
+        <p class="introduction">Bienvenido al mejor club de cannabis medicinal del país.<br></p>
 
-    <form  class="main-form" autocomplete="off
-    ">
-    <div>
-        <label for="medical-condition-list">Elija la dolencia prescripta por su médico:</label>
-        <input list="medical-condition" id="medical-condition-list">
-            <datalist id="medical-condition" dir="auto">
-                <option value="Ansiedad"></option>
-                <option value="Estrés"></option>
-                <option value="Depresión"></option>
-                <option value="Dolor"></option>
-                <option value="Insomnio"></option>
-                <option value="Enfermedad de Crohn´s"></option>
-            </datalist>
-    </div>
-    <button id="btnStrain">Elegí tu cepa</button>
-    <div class="display"></div>
-    </form>
+        <form  class="main-form" autocomplete="off">
+        <div>
+            <label for="medical-condition-list" class="medical-condition-label">Elegí la dolencia prescripta por su médico:</label>
+            <input list="medical-condition" id="medical-condition-list">
+                <datalist id="medical-condition" dir="auto">
+                    <option value="Ansiedad"></option>
+                    <option value="Estrés"></option>
+                    <option value="Depresión"></option>
+                    <option value="Dolor"></option>
+                    <option value="Insomnio"></option>
+                    <option value="Enfermedad de Crohn's"></option>
+                </datalist>
+        </div>
+        <button id="btnStrain">Elegí tu cepa</button>
+        <div class="display"></div>
+        </form>
+    </main>
 
 </body>
 </html>
