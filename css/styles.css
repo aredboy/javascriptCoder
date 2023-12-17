@@ -1,5 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
-    font-size: 62.5%;
+  max-width: 100%;
+  display: grid;
+  font-size: 62.5%;
   }
   body {
     box-sizing: border-box;
@@ -9,11 +16,10 @@ html {
   main {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    padding: 3em;
+    gap: 1em;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -27,12 +33,6 @@ html {
     font-weight: 700;
   }
   
-  header {
-    padding: 20px 0 0 0;
-    background: white;
-    text-align: center;
-  }
-  
   ul {
     list-style: none;
   }
@@ -42,14 +42,11 @@ html {
   }
   
 
-  #img-carrito {
-    cursor: pointer;
-  }
-  
+
 /* Title */
 #logo {
   color: #154644 ;
-  font-size: 3rem;
+  font-size: 3.6rem;
   font-weight: bold;
 }
 
@@ -62,7 +59,7 @@ html {
 
 .main-form {
   background-color: #F8F8F2;
-  margin-top: 14em;
+  margin-top: 6em;
   padding: 1em;
   border-radius: 1em;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -83,30 +80,32 @@ html {
 }
   .display{
     display: grid;
-    /* Overflow: unset; */
-    gap: 10px;
+    max-width: 100%;
+    gap: 5px;
+    transition: .2s;
+    grid-template-columns: repeat(1, 300px);
   };
 
-@media (max-width: 425px){
+@media (max-width: 620px){
     .display {
-        grid-template-columns: repeat(1, 320px);
+        grid-template-columns: repeat(1, 300px);
         }
   }
-@media (max-width: 768px){
+@media (min-width: 620px){
     .display {
-        grid-template-columns: repeat(2, 320px);
+        grid-template-columns: repeat(2, 300px);
     }
   }
 
-@media (max-width: 1024px) {
+@media (min-width: 940px) {
     .display {
-        grid-template-columns: repeat(3, 320px);
+        grid-template-columns: repeat(3, 300px);
     }
   }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
     .display {
-        grid-template-columns: repeat(4, 320px);
+        grid-template-columns: repeat(4, 300px);
     }
 }
 
@@ -114,11 +113,12 @@ html {
 
 /*cards*/
   .card {
-    width: 320px;
+    width: 300px;
     text-align: center;
     border: 1px solid #e1e1e1;
     background: white;
     border-radius: .6rem;
+    transition: .2s;
   }
 
   .card .name {
@@ -159,6 +159,12 @@ html {
 
 
 /* navbar */
+#header {
+  display: flex;
+  padding: 20px 0 0 0;
+  background: #F8F8F2;
+  text-align: center;
+}
 
 .main-header__logo-container {
   background-color: #F8F8F2;
@@ -166,6 +172,10 @@ html {
   padding: 0;
   flex-basis: 30%;
   flex-shrink: 1;
+}
+
+#img-carrito {
+  cursor: pointer;
 }
 
 .logo {
@@ -337,15 +347,15 @@ html {
 
 .cart-container__generate {
   background-color: hsl(43, 74%, 49%, 70%);
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0;
 }
 .cart-container__generate:hover {
   background-color: hsl(43, 74%, 49%, 80%);
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0;
 }
 .cart-container__generate:active {
   background-color: hsl(43, 74%, 49%, 90%);
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0;
 }
 
 /* Search Button */

@@ -24,7 +24,7 @@
   }
   
   /* For devices larger than 550px */
-  @media (min-width: 550px) {
+  @media (min-width: 2000px) {
     .container {
       width: 80%;
     }
@@ -217,7 +217,7 @@
       font-size: 4.2rem;
     }
     h3 {
-      font-size: 3.6rem;
+      font-size: 2.4rem;
     }
     h4 {
       font-size: 3rem;
@@ -230,18 +230,18 @@
     }
   }
   
-  p {
+  /* p {
     margin-top: 0;
-  }
+  } */
   
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
+  /* a {
     color: #1eaedb;
   }
   a:hover {
     color: #0fa0ce;
-  }
+  } */
   
   /* Buttons
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
