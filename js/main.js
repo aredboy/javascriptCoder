@@ -246,7 +246,11 @@ function renderCart() {
         const row = document.createElement("tr");
         row.setAttribute("class", "cart-product_container");
         row.innerHTML = `
-        <td><img src="${product.imagen}" width="90px"/></td>
+        <td>
+            <div class="cart-image">
+                <img src="${product.imagen}" width="90px"/>
+            </div>
+        </td>
         <td>${product.titulo}</td>
         <td class="cart-btn_minus-cell">
             <button class="cart-btn_minus">-</button>

@@ -33,20 +33,31 @@
             <table id="cart-list" class="cart-container__content">
                 <thead>
                     <tr>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Cantidad</th>
+                        <th class="cart-container__titles">Imagen</th>
+                        <th class="cart-container__titles">Nombre</th>
+                        <th></th>
+                        <th class="cart-container__titles">Cantidad</th>
                         <th class="cart-container__close">x</th>
                     </tr>
                 </thead>
                 <tbody ></tbody>
                 <tfoot>
                     <tr>
+                        <td></td>
                         <td>
                             <a href="#" id="empty-cart" class="boton cart-container__empty">Vaciar Carrito</a>
                         </td>
                         <td class="cart-container__footer">Total:</td>
                         <td class="cart-product_total-quantity"></td>
+                        <td></td>
+                        <td>
+                            <button class="cart-container__generate">Generar Pedido</button>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tfoot>
+                    <tr>
+                        <td><br></td>
                     </tr>
                 </tfoot>
             </table>
@@ -74,8 +85,8 @@
                 </datalist>
         </div>
         <button id="btnStrain">Elegí tu cepa</button>
-        <div class="display"></div>
         </form>
+    <div class="display"></div>
     </main>
 
 </body>
