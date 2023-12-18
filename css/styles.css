@@ -110,7 +110,6 @@ html {
 }
 
 
-
 /*cards*/
   .card {
     width: 300px;
@@ -223,14 +222,13 @@ html {
   border-radius: 0.8em;
   padding: 30px;
   overflow-y: auto;
-  max-height: 500px;
+  max-height: 1300px;
   transition: 1s;
 }
 @media (min-width: 425px) {
   .cart-container__content {
     top: 55%;
-    width: 90%;
-    left: 10%;
+    width: 92%;
   }
 }
 @media (min-height: 1024px) {
@@ -240,7 +238,7 @@ html {
   }
 }
 .cart-container__content--visible {
-  display: block;
+  display: grid;
 }
 .cart-container--transform-in {
   transform: translateY(0);
@@ -272,15 +270,21 @@ html {
   color: #B9ECE6;
 }
 
+.cart-container__titles-container{
+  display: flex;
+  justify-content: flex-start;
+}
+
 .cart-container__titles {
   color: #154644;
   font-size: 1.2em;
   font-weight: 1000;
   line-height: 1.2;
+  margin: 0 30px;
 }
 
 .cart-container__footer {
-  padding: 0 0 0 50px;
+  padding: 0 0 0 30px;
   font-size: 1.2em;
   font-weight: 1000;
   line-height: 1.2;
@@ -315,21 +319,24 @@ html {
 
 .cart-btn_minus, .cart-btn_plus {
   background-color: hsl(43, 74%, 49%, 60%);
+  padding: 0 15px;
 }
 .cart-btn_minus:hover, .cart-btn_plus:hover {
   background-color: hsl(43, 74%, 49%, 70%);
+  padding: 0 15px;
 }
 .cart-btn_minus:active, .cart-btn_plus:active {
   background-color: hsl(43, 74%, 49%, 80%);
+  padding: 0 15px;
 }
 
 .erase-product {
   height: 28px;
   width: 28px;
   margin: 2px 0 0 10px;
-  padding: 0 0 35px 0;
+  padding: 0px 0 34px 0;
   background-color: hsl(359, 54%, 51%, 80%);
-  color: #000;
+  color: rgb(78, 78, 78);
 }
 
 #empty-cart {
@@ -340,6 +347,7 @@ html {
 }
 #empty-cart:hover {
   color: hsl(359, 54%, 51%, 98%);
+  transform: scale(1.10);
   font-size: 1.2em;
   font-weight: 1000;
   line-height: 1.2;
@@ -348,14 +356,23 @@ html {
 .cart-container__generate {
   background-color: hsl(43, 74%, 49%, 70%);
   margin: 10px 0 0 0;
+  padding: inherit;
+  width: 140px;
+  margin: 0 0 0 25px;
 }
 .cart-container__generate:hover {
   background-color: hsl(43, 74%, 49%, 80%);
   margin: 10px 0 0 0;
+  padding: inherit;
+  width: 140px;
+  margin: 0 0 0 25px;
 }
 .cart-container__generate:active {
   background-color: hsl(43, 74%, 49%, 90%);
   margin: 10px 0 0 0;
+  padding: inherit;
+  width: 140px;
+  margin: 0 0 0 25px;
 }
 
 /* Search Button */
